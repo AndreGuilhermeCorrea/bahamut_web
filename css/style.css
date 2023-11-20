@@ -153,11 +153,15 @@ section.como-jogar div {
   width: 80vw;
   flex-direction: column;
 }
-
 section.como-jogar div div {
   width: 90%;
   display: flex;
   justify-content: space-between;
+}
+
+section.como-jogar img {
+  max-width: 48vw;
+  max-height: 100%; 
 }
 
 /*disposicao dos botoes*/
