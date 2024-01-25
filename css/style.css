@@ -295,12 +295,20 @@ section.cartas.cartas-sabotagem div {
     height: 500px;
 }
 
-.regras1 img,
-.regras2 img {
-    max-width: 120px;
+.regras1 img{
     height: auto;
-    display: inline-block;
-    margin: 10px;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+
+}
+.regras2 img {
+    height: auto;
+    width: 500px;
+    align-items: center;
+    align-self: center;
+
 }
 
 .elementos img {
