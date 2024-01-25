@@ -113,12 +113,28 @@ footer{
     background-color: var(--color-dark3);
 }
 
+section.regras1,
+section.regras2,
 section.jornada,
 section.redencao,
 section.inicio  {
     display: flex;
     justify-content: center;
     max-width: 100%;
+}
+
+section.regras1 div{
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;    
+}
+
+section.regras2 div{
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;    
 }
 
 section.jornada div,
@@ -130,29 +146,29 @@ section.inicio div {
     text-align: center;  
 }
 
+section.regras1 div,
+section.inicio div,
 section.jornada div{
     flex-direction: row;
 }
 
-section.inicio div{
-    flex-direction: row;
-}
-
+section.regras2 div,
 section.redencao div{
     flex-direction: row-reverse;
 }
 
-
 section.inicio div div{
-    max-width: 100%;
     display: flex;
+    max-width: 100%;
+    flex-direction: row;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    flex-direction: row;
+    
 }
 
-
+section.regras1 div div,
+section.regras2 div div,
 section.jornada div div,
 section.redencao div div
  {
@@ -166,7 +182,8 @@ section.redencao div div
     
 }
 
-section.regras,
+section.regras1,
+section.regra2,
 section.como-jogar,
 section.tabuleiro,
 section.cartas{
@@ -182,7 +199,8 @@ section.cartas{
 
 
 section.como-jogar h2,
-section.regras h2,
+section.regras1 h2,
+section.regras2 h2,
 section.tabuleiro h2,
 section.cartas h2,
 section.jornada h2,
@@ -191,7 +209,7 @@ section.redencao h2{
     text-transform: uppercase;
     color: var(--color-purple);
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-block-end: 20px;
     align-items: center;
 }
@@ -202,7 +220,6 @@ section.inicio h2 {
 }
 
 section.como-jogar h2,
-section.regras h2,
 section.tabuleiro h2,
 section.cartas h2{
     align-items: top;
@@ -211,7 +228,8 @@ section.cartas h2{
 }
 
 section.como-jogar h2,
-section.regras h2,
+section.regras1 h2,
+section.regras2 h2,
 section.tabuleiro h2,
 section.cartas h2,
 section.jornada h2,
@@ -220,6 +238,8 @@ section.redencao h2{
     text-align: left;
 }
 
+section.regras1 p,
+section.regras2 p,
 section.jornada p,
 section.redencao p {
     font-size: 20px;
@@ -271,58 +291,11 @@ section.cartas.cartas-sabotagem div {
     height: 500px;
 }
 
-
-
-/* Seção para Seções Adicionais na Página de Regras(Reutilizadas nas outras pages) */
-section.regras {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section.regras div {
-    max-width: 80vw;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: space-between;
-}
-
-section.regras div div {
-    flex-direction: column;
-    align-self: center;
-    width: 60%;
-}
-
-/* Espaçamento entre linhas Seção primaria */
-section.regras.primary p {
-    margin-bottom: 10px;
-}
-
-/* Espaçamento entre linhas Seção secundaria */
-section.regras.secundary p {
-    margin-bottom: 10px;
-}
-
-/* Seção primaria */
-section.regras.secundary {
-    background-color: var(--secondary-bg-color);
-    color: white;
-    padding: 20px;
-}
-
-/* Seção secundaria */
-section.regras.primary {
-    background-color: var(--main-bg-color);
-    color: white;
-    padding: 20px;
-}
-section.regras.primary img {
+.regras1 img,
+.regras2 img {
     max-width: 120px;
     height: auto;
     display: inline-block;
     margin: 10px;
 }
-section.regras.secundary img {
-    max-width: auto;
-    height: auto;
-}
+
