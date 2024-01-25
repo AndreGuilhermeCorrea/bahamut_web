@@ -29,9 +29,7 @@ body {
     box-shadow: 5px 5px 5px 5px var(--color-dark4);
 }
 
-
 .content {
-    
     transition: 1s;
 }
 
@@ -96,8 +94,7 @@ header .navigation_header a:hover {
     }
 }
 
-
-footer{
+footer {
     background-color: var(--color-dark4);
     color: var(--color-white);
     margin: 10px;
@@ -113,65 +110,71 @@ footer{
     background-color: var(--color-dark3);
 }
 
+
+
+
 section.regras1,
-section.regras2,
+section.regra2,
+section.elementos,
+section.como-jogar,
+section.tabuleiro,
+section.cartas {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-block-end: 20px;
+}
+
 section.jornada,
 section.redencao,
-section.inicio  {
+section.inicio {
     display: flex;
     justify-content: center;
     max-width: 100%;
 }
 
-section.regras1 div{
-    max-width: 60%;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;    
-}
-
-section.regras2 div{
-    max-width: 60%;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;    
-}
-
+ 
+section.regras1 div,
+section.regras2 div,
+section.elementos div,
 section.jornada div,
 section.redencao div,
 section.inicio div {
     max-width: 80%;
     display: flex;
     justify-content: space-between;
-    text-align: center;  
+    text-align: center;
 }
 
 section.regras1 div,
+section.elementos div,
 section.inicio div,
-section.jornada div{
+section.jornada div {
     flex-direction: row;
 }
 
 section.regras2 div,
-section.redencao div{
+section.redencao div {
     flex-direction: row-reverse;
 }
 
-section.inicio div div{
+section.inicio div div {
     display: flex;
     max-width: 100%;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    
 }
 
 section.regras1 div div,
 section.regras2 div div,
+section.elementos div,
 section.jornada div div,
-section.redencao div div
- {
+section.redencao div div {
     display: flex;
     max-width: 100%;
     flex-direction: column;
@@ -179,33 +182,31 @@ section.redencao div div
     align-self: center;
     width: 60%;
     text-align: justify;
-    
 }
 
-section.regras1,
-section.regra2,
-section.como-jogar,
-section.tabuleiro,
-section.cartas{
+
+section.elementos div div{
     display: flex;
-    justify-content: center;
     max-width: 100%;
-    text-align: center; 
-    flex-direction: row; 
-    padding-top: 20px;
-    padding-block-end: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    text-align: left;
 }
+
 
 
 
 section.como-jogar h2,
 section.regras1 h2,
 section.regras2 h2,
+section.elementos h2,
 section.tabuleiro h2,
 section.cartas h2,
 section.jornada h2,
 section.inicio h2,
-section.redencao h2{
+section.redencao h2 {
     text-transform: uppercase;
     color: var(--color-purple);
     font-weight: bold;
@@ -214,14 +215,14 @@ section.redencao h2{
     align-items: center;
 }
 
-section.inicio h2 {   
+section.inicio h2 {
     font-size: 40px;
     text-align: center;
 }
 
 section.como-jogar h2,
 section.tabuleiro h2,
-section.cartas h2{
+section.cartas h2 {
     align-items: top;
     text-align: left;
     margin: 20px;
@@ -230,19 +231,21 @@ section.cartas h2{
 section.como-jogar h2,
 section.regras1 h2,
 section.regras2 h2,
+section.elementos h2,
 section.tabuleiro h2,
 section.cartas h2,
 section.jornada h2,
-section.redencao h2{
+section.redencao h2 {
     font-size: 20px;
     text-align: left;
 }
 
 section.regras1 p,
 section.regras2 p,
+section.elementos p,
 section.jornada p,
 section.redencao p {
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
     padding-block-end: 20px;
     color: var(--color-white);
@@ -254,7 +257,7 @@ section.como-jogar div,
 section.tabuleiro div,
 section.cartas .cartas-recompensa,
 section.cartas .cartas-numeradas,
-section.cartas .cartas-sabotagem{
+section.cartas .cartas-sabotagem {
     width: 99%;
     min-height: 100%;
     flex-direction: row;
@@ -270,13 +273,14 @@ section.cartas.cartas-sabotagem div {
     align-self: center;
     align-items: center;
 }
+
 .cartas-sabotagem img,
 .cartas-numeradas img {
     height: 180px;
     width: auto;
 }
 
-.cartas-recompensa img{
+.cartas-recompensa img {
     height: 360px;
     width: auto;
 }
@@ -299,3 +303,9 @@ section.cartas.cartas-sabotagem div {
     margin: 10px;
 }
 
+.elementos img {
+    max-width: 120px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
