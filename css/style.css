@@ -1,259 +1,328 @@
 /* configurações globais */
 :root {
-  --main-bg-color: #2A2C2F;
-  --secondary-bg-color: #323437;
-  --text-color: white;
+    --color-dark1: #2a2c2f;
+    --color-dark2: #323437;
+    --color-white: #fff;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-purple: #b040ff;
 }
 
 * {
-  color: var(--text-color);
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Lucida Console', 'Courier New', monospace;
+    background-color: var(--color-dark1);
+
+    align-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 1230px;
+    height: 100%;
+
+    box-shadow: 5px 5px 5px 5px var(--color-dark4);
+}
+
+
+.content {
+    
+    transition: 1s;
+}
+
+/* secoes */
+section {
+    padding-top: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--color-dark1);
+    justify-content: right;
+    padding: 10px;
+    height: 18px;
+    box-shadow: 1px 1px 4px var(--color-dark4);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+header .navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    z-index: 2;
+}
+
+header .navigation_header a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-purple);
+    transition: 2s;
+    font-weight: none;
+    font-size: 12px;
+}
+
+header .navigation_header a:hover {
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.active {
+    background: var(--color-dark4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation_header {
+        position: absolute;
+        flex-direction: column !important;
+        top: 0;
+        background: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 9px;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+
+
+footer{
+    background-color: var(--color-dark4);
+    color: var(--color-white);
+    margin: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 .primary {
-  background-color: var(--main-bg-color);
+    background-color: var(--color-dark4);
 }
 
 .secundary {
-  background-color: var(--secondary-bg-color);
+    background-color: var(--color-dark3);
 }
 
-section {
-  padding: 50px 0;
-  box-sizing: border-box;
-  overflow: hidden; 
-}
-
-section.jornada h2,
-section.como-jogar h2,
-section.tabuleiro h2,
-section.cartas h2 {
-  height: auto;
-  width: 80vw;
-  align-items: end;
-  display: flex;
-  font-size: 60px;
-}
-
-/* Cabecalho */
-header {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  height: 60px;
-  align-items: center;
-  background-color: var(--main-bg-color);
-}
-
-header div {
-  display: flex;
-  width: 260px;
-  justify-content: space-around;
-}
-
-/* Seções compartilhadas (jornada e inicio) */
 section.jornada,
-section.inicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section.redencao,
+section.inicio  {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
 }
 
 section.jornada div,
+section.redencao div,
 section.inicio div {
-  max-width: 80vw;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: space-between;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;  
 }
+
+section.jornada div{
+    flex-direction: row;
+}
+
+section.inicio div{
+    flex-direction: row;
+}
+
+section.redencao div{
+    flex-direction: row-reverse;
+}
+
+
+section.inicio div div{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 
 section.jornada div div,
-section.inicio div div {
-  flex-direction: column;
-  align-self: center;
-  width: 60%;
+section.redencao div div
+ {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    width: 60%;
+    text-align: justify;
+    
 }
 
-section.jornada div div h2,
-section.inicio div div h2 {
-  margin-bottom: 15px;
+section.regras,
+section.como-jogar,
+section.tabuleiro,
+section.cartas{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center; 
+    flex-direction: row; 
+    padding-top: 20px;
+    padding-block-end: 20px;
 }
 
-/* cartas */
-section.cartas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+section.como-jogar h2,
+section.regras h2,
+section.tabuleiro h2,
+section.cartas h2,
+section.jornada h2,
+section.inicio h2,
+section.redencao h2{
+    text-transform: uppercase;
+    color: var(--color-purple);
+    font-weight: bold;
+    padding-top: 20px;
+    padding-block-end: 20px;
+    align-items: center;
 }
 
-.secao-cartas {
-  display: flex;
-  width: 80vw;
-  height: 45vh;
-  justify-content: space-between;
-  font-size: 40px;
-  align-self: center;
+section.inicio h2 {   
+    font-size: 40px;
+    text-align: center;
 }
 
-section.cartas .atras,
-section.cartas .frente {
-  height: 80vh;
-  width: 35vw;
-  flex-direction: column;
-  justify-content: space-around;
+section.como-jogar h2,
+section.regras h2,
+section.tabuleiro h2,
+section.cartas h2{
+    align-items: top;
+    text-align: left;
+    margin: 20px;
 }
 
-.atras img,
-.frente img {
-  height: 35vh;
-  width: 13vw;
+section.como-jogar h2,
+section.regras h2,
+section.tabuleiro h2,
+section.cartas h2,
+section.jornada h2,
+section.redencao h2{
+    font-size: 20px;
+    text-align: left;
 }
 
-.atras div,
-.frente div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+section.jornada p,
+section.redencao p {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-block-end: 20px;
+    color: var(--color-white);
+    text-indent: 40px;
 }
 
-section.cartas .atras_recompensa img {
-  max-height: 70vh;
+
+section.como-jogar div,
+section.tabuleiro div,
+section.cartas .cartas-recompensa,
+section.cartas .cartas-numeradas,
+section.cartas .cartas-sabotagem{
+    width: 99%;
+    min-height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-/* tabuleiro */
-section.tabuleiro {
-  display: flex;
-  justify-content: center;
-  height: 140vh; 
+section.cartas.cartas-recompensa div,
+section.cartas.cartas-numeradas div,
+section.cartas.cartas-sabotagem div {
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+}
+.cartas-sabotagem img,
+.cartas-numeradas img {
+    height: 180px;
+    width: auto;
 }
 
-section.tabuleiro div {
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.cartas-recompensa img{
+    height: 360px;
+    width: auto;
 }
 
-section.tabuleiro img {
-  max-width: 48vw;
-  max-height: 100%; 
+.tabuleiro img {
+    width: auto;
+    height: 800px;
 }
 
-/* como jogar */
-section.como-jogar {
-  display: flex;
-  height: 200vh;
-  justify-content: center;
+.como-jogar img {
+    width: auto;
+    height: 500px;
 }
 
-section.como-jogar div {
-  display: flex;
-  width: 80vw;
-  flex-direction: column;
-}
-section.como-jogar div div {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
 
-section.como-jogar img {
-  max-width: 48vw;
-  max-height: 100%; 
-}
-
-/*disposicao dos botoes*/
-header div {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espaço entre os botões */
-}
-
-header div a {
-  font-size: 16px; /* Tamanho da fonte menor */
-  text-decoration: none; /* Remover sublinhado dos links */
-  color: white; /* Cor do texto dos botões */
-}
-
-/* Seção para Botões no Header */
-header div {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espaço entre os botões */
-}
-
-header div a {
-  font-size: 16px; /* Tamanho da fonte menor */
-  text-decoration: none; /* Remover sublinhado dos links */
-  color: white; /* Cor do texto dos botões */
-}
 
 /* Seção para Seções Adicionais na Página de Regras(Reutilizadas nas outras pages) */
 section.regras {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section.regras div {
-  max-width: 80vw;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: space-between;
+    max-width: 80vw;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
 }
 
 section.regras div div {
-  flex-direction: column;
-  align-self: center;
-  width: 60%;
-}
-
-section.regras div div h2 {
-  margin-bottom: 15px;
-}
-
-/* Títulos das Seções Adicionais */
-section.regras h2 {
-  height: 20vh;
-  width: 80vw;
-  align-items: end;
-  display: flex;
-  font-size: 60px;
+    flex-direction: column;
+    align-self: center;
+    width: 60%;
 }
 
 /* Espaçamento entre linhas Seção primaria */
 section.regras.primary p {
-  margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 /* Espaçamento entre linhas Seção secundaria */
 section.regras.secundary p {
-  margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 /* Seção primaria */
 section.regras.secundary {
-  background-color: var(--secondary-bg-color);
-  color: white;
-  padding: 20px;
+    background-color: var(--secondary-bg-color);
+    color: white;
+    padding: 20px;
 }
 
 /* Seção secundaria */
 section.regras.primary {
-  background-color: var(--main-bg-color);
-  color: white;
-  padding: 20px;
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 20px;
 }
 section.regras.primary img {
-  max-width: 120px;
-  height: auto;
-  display: inline-block;
-  margin: 10px; 
+    max-width: 120px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
 }
 section.regras.secundary img {
-  max-width: auto;
-  height: auto;
-
+    max-width: auto;
+    height: auto;
 }
