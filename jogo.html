@@ -1,64 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Jogo - The Face of Bahamut</title>
 </head>
-<body>  
-    <div class="header" id="header">     
-        <div class="logo_header"></div>
-        <div class="navigation_header" id="navigation_header">
-            <a href="index.html">INÍCIO</a>
-            <a href="regras.html">REGRAS</a>
-            <a href="elementos.html">ELEMENTOS</a>
-            <a href="#" class="active">JOGO</a>
-            <a href="sobre.html">SOBRE</a>
-        </div>
-    </div>
-    <!-- Seção 1 -->
-    <section class="inicio secundary">
-        <div>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <section class="navigation_header">
+            <a href="index.html">inicio</a>
+            <a href="regras.html">regras</a>
+            <a href="elementos.html">elementos</a>
+            <a href="#" class="active" onclick="scrollToTop()">jogo</a>
+            <a href="sobre.html">sobre</a>
+        </section>
+    </header>
+
+    <!-- Seção global -->
+    <section class="content">
+       
+        <!-- Seção 1 -->
+        <section class="inicio secundary">
             <div>
-                <h2>O Jogo</h2>
+                <div>
+                    <h2>O Jogo</h2>
+                </div>
+                <img src="img/bahamuuuuut 1.svg" />
             </div>
-            <img src="img/bahamuuuuut 1.svg" alt="" srcset="">
-        </div>
-    </section>
-    <!-- Seção 2 -->
-    <section class="regras primary">    
-        <div>
+        </section>
+       
+        <!-- Seção 2 -->
+        <section class="elementos primary">
             <div>
-                <h2>Ações</h2>
-                <p>•	1- Pescar uma carta no início do turno.</p>
-                <p>•	2- Rolar os dados e andar o numero de casas.</p>
-                <p>•	3- Jogar uma carta de número ou sabotagem.</p>
-                <p>________________________________________________</p>
-                <p>•	4- Pegar recompensa.</p>
-                <p>•	5- Jogar carta de recompensa antes do turno começar.</p>
+                <div>
+                    <h2>Ações</h2>
+                    <p>I Pescar uma carta no início do turno.</p>
+                        <p>II Rolar os dados e andar o numero de casas.</p>
+                            <p>III Jogar uma carta de número ou sabotagem.</p>
+                    
+                                <p>IV Pegar recompensa.</p>
+                                    <p> V Jogar carta de recompensa antes do turno começar.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
         <!-- Seção 3 -->
-    <section class="regras secundary">    
-        <div>
+        <section class="elementos secundary">
             <div>
-                <h2>Como Jogar</h2>
-                <p>No início do turno, antes de jogar os dados, o jogador tem o direito de pegar uma carta do baralho. Depois de mover seu peão o número de casas sorteadas no dado, o jogador pode jogar uma carta do tipo “número” com à cor ou ao número correspondente da casa onde seu peão está..</p>
-                <p>Após joga-la ele ganha uma moeda, mas se a carta for do mesmo número e da mesma cor, o jogador ganha duas moedas.</p>
-                <p>Se ele não tiver nenhuma carta correspondente ele retrocede uma casa.</p>
-                <p>O jogador também tem a opção de jogar uma carta do tipo “sabotagem” da cor correspondente do terreno no próximo jogador e retroceder uma casa.</p>
-        </div>
-    </section>
+                <div>
+                    <h2>Como Jogar</h2>
+                    <p>No início do turno, antes de jogar os dados, o jogador tem o direito de pegar uma carta do
+                        baralho. Depois de mover seu peão o número de casas sorteadas no dado, o jogador pode jogar uma
+                        carta do tipo “número” com à cor ou ao número correspondente da casa onde seu peão está.<br/><br/>
+                    Após joga-la ele ganha uma moeda, mas se a carta for do mesmo número e da mesma cor, o jogador
+                        ganha duas moedas.<br/><br/>
+                    Se ele não tiver nenhuma carta correspondente ele retrocede uma casa.<br/><br/>
+                    O jogador também tem a opção de jogar uma carta do tipo “sabotagem” da cor correspondente do
+                        terreno no próximo jogador e retroceder uma casa.</p>
+                </div>
+        </section>
+       
         <!-- Seção 4 -->
-    <section class="regras primary">    
-        <div>
+        <section class="elementos primary">
             <div>
-                <h2>OBJETIVO</h2>
-                <p>Seja o primeiro a alcançar o final do tabuleiro para se tornar a forma única de Bahamut.</p>
+                <div>
+                    <h2>OBJETIVO</h2>
+                    <p>Seja o primeiro a alcançar o final do tabuleiro para se tornar a forma única de Bahamut.</p>
+                </div>
             </div>
-        </div>
+        </section>
+    
     </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <small>Desenvolvido em novembro de 2023 para o curso de graduação em
+            Jogos Digitais - FATEC/SP
+        </small>
+    </footer>
 </body>
+
 </html>
