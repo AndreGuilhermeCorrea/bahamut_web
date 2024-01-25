@@ -18,14 +18,11 @@ body {
     position: relative;
     font-family: 'Lucida Console', 'Courier New', monospace;
     background-color: var(--color-dark1);
-
     align-content: center;
-
     margin-left: auto;
     margin-right: auto;
     width: 1230px;
     height: 100%;
-
     box-shadow: 5px 5px 5px 5px var(--color-dark4);
 }
 
@@ -110,9 +107,6 @@ footer {
     background-color: var(--color-dark3);
 }
 
-
-
-
 section.regras1,
 section.regra2,
 section.elementos,
@@ -136,7 +130,6 @@ section.inicio {
     max-width: 100%;
 }
 
- 
 section.regras1 div,
 section.regras2 div,
 section.elementos div,
@@ -184,7 +177,6 @@ section.redencao div div {
     text-align: justify;
 }
 
-
 section.elementos div div{
     display: flex;
     max-width: 100%;
@@ -194,9 +186,6 @@ section.elementos div div{
     width: 100%;
     text-align: left;
 }
-
-
-
 
 section.como-jogar h2,
 section.regras1 h2,
@@ -281,8 +270,11 @@ section.cartas.cartas-sabotagem div {
 }
 
 .cartas-recompensa img {
-    height: 360px;
+    height: 400px;
     width: auto;
+    align-items: center;
+    text-align: center;
+    align-self: center;
 }
 
 .tabuleiro img {
